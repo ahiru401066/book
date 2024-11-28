@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Example;
 use Illuminate\Http\Request;
 
 class ExampleController extends Controller
@@ -12,7 +13,8 @@ class ExampleController extends Controller
     }
 
     public function example()
-    {
-        return view('example');
+    {   
+        $examples = example::all();
+        return view('example', ['examples' => $examples]);
     }
 }

@@ -1,1 +1,1 @@
-example.blade.php
+{{ $examples }}

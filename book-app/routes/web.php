@@ -9,3 +9,7 @@ Route::get('/', function () {
 
 Route::get('/index', [ExampleController::class, 'index']);
 Route::get('/example', [ExampleController::class, 'example']);
+
+Route::get('/react', function() {
+    return view('index');
+});
